@@ -19,20 +19,21 @@ const collectEmployees = function () {
   let employeeNumber = 0;
 
   while (true) {
-    const employee = {};
+    const currentEmployee = {};
     let firstName = promptInput('Enter first name:');
-    employee.firstName = firstName;
+    currentEmployee.firstName = firstName;
     let lastName = promptInput('Enter last name:');
-    employee.lastName = lastName;
+    currentEmployee.lastName = lastName;
     let salary = promptInput('Enter salary');
-    employee.salary = Number(salary);
-    employeesArray.push(employee);
+    currentEmployee.salary = Number(salary);
+    employeesArray.push(currentEmployee);
     employeeNumber++;
     let newEmployee = confirm('Do you want to add another employee?');
     if (!newEmployee) {
       break;
     }
   }
+  return employeesArray;
   console.log(employeesArray);
 };
 
