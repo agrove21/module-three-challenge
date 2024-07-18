@@ -19,14 +19,14 @@ const collectEmployees = function () {
   let employeeNumber = 0;
 
   while (true) {
-    const currentEmployee = {};
+    const Employee = {};
     let firstName = promptInput('Enter first name:');
-    currentEmployee.firstName = firstName;
+    Employee.firstName = firstName;
     let lastName = promptInput('Enter last name:');
-    currentEmployee.lastName = lastName;
+    Employee.lastName = lastName;
     let salary = promptInput('Enter salary');
-    currentEmployee.salary = Number(salary);
-    employeesArray.push(currentEmployee);
+    Employee.salary = Number(salary);
+    employeesArray.push(Employee);
     employeeNumber++;
     let newEmployee = confirm('Do you want to add another employee?');
     if (!newEmployee) {
@@ -40,7 +40,13 @@ const collectEmployees = function () {
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
-};
+  let totalSalary = 0;
+  for (let i = 0; i < employeesArray.length; i++){
+    totalSalary = totalSalary + employeesArray[i].salary;
+  }
+  let averageSalary = totalSalary / employeesArray.length;
+  console.log(`The average employee salary between our ${employeesArray.length} employee(s) is $${averageSalary}`);
+}
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
