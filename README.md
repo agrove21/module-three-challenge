@@ -9,6 +9,8 @@ I modified starter code to create an application that enables a payroll manager 
 
 Also, I learned about loops in JavaScript.
 
+CODE SOURCE NOTE: I worked with a tutor on this assignment.
+
 ## Deployed Website Link
 https://agrove21.github.io/module-three-challenge/
 
