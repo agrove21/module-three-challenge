@@ -22,12 +22,16 @@ const collectEmployees = function () {
     const currentEmployee = {};
     let firstName = promptInput('Enter first name:');
     currentEmployee.firstName = firstName;
+
     let lastName = promptInput('Enter last name:');
     currentEmployee.lastName = lastName;
+
     let salary = promptInput('Enter salary');
     currentEmployee.salary = Number(salary);
+
     employeesArray.push(currentEmployee);
     employeeNumber++;
+
     let newEmployee = confirm('Do you want to add another employee?');
     if (!newEmployee) {
       break;
@@ -50,6 +54,9 @@ const displayAverageSalary = function (employeesArray) {
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
+  const randomIndex = Math.floor(Math.random() * employeesArray.length);
+  const randomEmployee = employeesArray[randomIndex];
+  console.log(`Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName}, our random drawing winner!`);
 };
 
 /*

@@ -16,4 +16,4 @@ https://agrove21.github.io/module-three-challenge/
 
 
 ## Screenshot
-<img src="./Screenshot 2024-07-18 181109.png" width="800px">
+<img src="updated screenshot.png" width="800px">
